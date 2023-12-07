@@ -1,0 +1,9 @@
+matplotlib
+plotly
+streamlit
+jupyterlab
+pandas
+numpy
+scipy
+python-dotenv
+torch
