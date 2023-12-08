@@ -29,6 +29,17 @@ class TestGiniImpurity(unittest.TestCase):
 
         self.assertTrue(np.isclose(gini_impurity, 0.5))
 
+    def test_call(self):
+        X = np.array([
+            [1, 1, 1, 1, 2, 2, 2, 2],
+            [1, 1, 1, 0, 1, 0, 0, 0]
+        ])
+        y = np.array([1, 1, 0, 0, 1, 0, 0, 1])
+
+        gini_impurities = self.gini_impurity(X, y)
+
+        self.assertTrue(np.allclose(gini_impurities, np.array([0.5, 0.375])))
+
 
 if __name__ == "__main__":
     unittest.main()
